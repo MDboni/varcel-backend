@@ -47,6 +47,11 @@ app.use((req, res) => {
   res.status(404).json({ status: "fail", data: "Not Found" });
 });
 
+// Test route
+app.use("/", (req, res) => {
+  res.status(200).json({ status: "success", message: "API Router Working!" });
+});
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 export default app;

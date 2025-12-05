@@ -6,10 +6,7 @@ import authMiddleware from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
-// Test route
-router.get("/test", (req, res) => {
-  res.status(200).json({ status: "success", message: "API Router Working!" });
-});
+
 
 // User routes
 router.post("/register", UserController.registerUser);
